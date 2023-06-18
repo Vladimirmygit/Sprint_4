@@ -3,13 +3,9 @@ package PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OrderPage {
     private WebDriver driver;
-
     private By orderButtonHeader = By.xpath(".//button[@class = 'Button_Button__ra12g' and .='Заказать']");
     private By orderButtonMiddle = By.xpath(".//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
     private By firstName = By.xpath(".//input[@placeholder='* Имя']");
@@ -101,7 +97,6 @@ public class OrderPage {
         clickColorCheckbox();
         writeCommentField(userComment);
         clickOrderButton();
-
     }
     public void clickButtonOrderConfirmation() {
         driver.findElement(buttonOrderConfirmation).click();
@@ -111,6 +106,4 @@ public class OrderPage {
             String firstFourteenChars = fullText.substring(0, Math.min(fullText.length(), 14));
             return firstFourteenChars;
         }
-
-
 }

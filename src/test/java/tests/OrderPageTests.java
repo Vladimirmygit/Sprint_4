@@ -52,7 +52,6 @@ public class OrderPageTests extends BaseTest {
         String actualText = orderPage.getOrderMessage();
         Assert.assertEquals(expectedText, actualText);
     }
-
      @Test
     public void testMakeOrderViaButtonMiddle() {
         driver.get("https://qa-scooter.praktikum-services.ru/");
@@ -72,7 +71,5 @@ public class OrderPageTests extends BaseTest {
          orderPage.getOrderMessage();
          String actualText = orderPage.getOrderMessage();
          Assert.assertEquals("Нет уведомления об оформлении заказа", expectedText, actualText);
-
-
     }
 }
